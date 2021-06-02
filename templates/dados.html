@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% csrf_token %}
+
+{% load crispy_forms_tags %}
+<html lang="pt-br">
+<head>
+    {% csrf_token %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Dados</title>
+</head>
+<body>
+    {% csrf_token %}
+    <h1>Nesta tela é possivel adicionar seus dados!</h1>
+    <style>
+    body {
+    text-align: center;
+    color: white;
+    background: rgb(22,142,191);
+    background: linear-gradient(90deg, rgba(22,142,191,1) 0%, rgba(7,178,243,1) 0%, rgba(41,3,255,1) 0%, rgba(27,173,228,1) 0%, rgba(3,104,255,1) 39%, rgba(3,46,255,1) 83%, rgba(3,50,255,1) 100%);
+    }
+    main {
+    background-color: white;
+    width: 700px;
+    heigth: 600px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 6px 6px 10px black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+    color: black;
+    text-align: left;
+    }
+    </style>
+    <br><br>
+    <main>
+        <form action="" method="POST">
+            
+            {% csrf_token %} 
+
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+
+        </form>
+        <br>
+        <a href="/"><button class="btn btn-danger">Cancelar</button></a>
+    </main>
+
+</body>
+</html>
