@@ -24,3 +24,12 @@ class CreateDados(CreateView):
         url = super().form_valid(form)
 
         return url
+
+
+
+################################################## LIST VIEW #########################
+
+
+class Ver_Dados(ListView):
+    model = Dados
+    template_name = 'perfil.html'
