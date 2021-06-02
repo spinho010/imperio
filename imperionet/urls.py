@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from vendas import views
-from vendas.views import CreateDados, Ver_Dados
+from vendas.views import CreateDados, Ver_Dados, Ver_Formulario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include("allauth.urls")),
     path("", include("pages.urls", namespace="pages")),
     path('dados/', CreateDados.as_view(), name='dados'),
-    path('perfil/', Ver_Dados.as_view(), name='ver_dados')
+    path('perfil/', Ver_Dados.as_view(), name='ver_dados'),
+    path('contato/', Ver_Formulario.as_view(), name='ver_formulario')
 ]

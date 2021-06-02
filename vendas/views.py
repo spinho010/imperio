@@ -33,3 +33,8 @@ class CreateDados(CreateView):
 class Ver_Dados(ListView):
     model = Dados
     template_name = 'perfil.html'
+
+
+class Ver_Formulario(ListView):
+    model = Dados
+    template_name = 'formulario.html'

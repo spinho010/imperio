@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
     <title>IMPERIO NETWORKS</title>
 
+
 </head>
 <body>
     <header>
@@ -40,18 +41,6 @@
             </div>
         </nav>
     </header>
-
-
-    {% if user.is_authenticated %}
-        <h6></h6>
-    {% else %}
-        <style>
-            body{
-                background-image: url(/static/back.png);
-            }
-        </style>
-        <br><br>
-    {% endif %}
 
 
     {% if user.is_authenticated %}
@@ -109,12 +98,27 @@
 
     <br><br><br>
 
-
-    <h2>Ola {{ user }} Bem-Vindo!</h2>
+{% if user.is_authenticated %}
+    <h2 style="padding: 10px;">Ola {{ user }} Bem-Vindo!</h2>
     <br><br>
-    <h2>Nossa Historia</h2>
+    <h2 style="padding: 10px;">Nosso Objetivo</h2><br>
+    <strong>
+    <p style="font-size: 20px; text-align: justify; padding: 10px;">Nos da IMPERIO prezamos prestatividade <br>
+    Com os clientes! Com nossos serviços e planos <br>
+    Com Acessibilidade a todos os publicos!, Sendo assim <br>
+    Com este Site procuramos a maior comodidade e facilidade <br>
+    Aos nossos clientes em relação a: Status da Rede, Realizar Compras <br>
+    Solicitar serviços E etc...., Nos ficamos felizes com sua Visita!</p></strong>
+    <br>
+    <h2 style="padding: 10px;">Nossa Localização</h2><br>
+    <p style="font-size: 20px; text-align: justify; padding: 10px;">
+        Av. Washington Luís Nº649, Simões Filho-BA
+        <a href="https://www.google.com.br/maps/place/Av.+Washington+Lu%C3%ADs,+649+-+Parque+Continental,+Sim%C3%B5es+Filho+-+BA,+43700-000/@-12.7820833,-38.3977668,17z/data=!3m1!4b1!4m5!3m4!1s0x7166b5987618b01:0xd6e7d6c649b67139!8m2!3d-12.7820833!4d-38.3955781" target="_blank"><button type="button" class="btn btn-success">Google Maps</button></a>
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.9449927463106!2d-38.39548157630827!3d-12.78208253248196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7166b5987618b01%3A0xd6e7d6c649b67139!2sAv.%20Washington%20Lu%C3%ADs%2C%20649%20-%20Parque%20Continental%2C%20Sim%C3%B5es%20Filho%20-%20BA%2C%2043700-000!5e0!3m2!1spt-BR!2sbr!4v1622661757970!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0; padding: 10px;" allowfullscreen="" loading="lazy"></iframe>
+    <hr>
     <br><br>
-    <h2>Nossa Localização</h2>
+    <h1>ENTRE EM CONTATO!</h1>
 </body>
 
 
@@ -131,18 +135,20 @@
                 }
                 a{
                 text-decoration: none;
-                color: white;z
+                color: white;}
+                #seila1{
+                    text-align: center;
                 }
         </style>
 
         <br>
-        <h1 style="text-align: center;"><strong>Entre em contato Conosco!</strong></h1><br>
+        <h1><strong>Entre em contato Conosco!</strong></h1><br>
         <ul style="display: inline-block;">   
             <strong>CONTATO</strong>                                                                                                                                                          
-                <li><a href="#"><strong>Entre em contato conosco!</strong><br></a></li>                                                             
-                <li><a href="#"><strong>Entre com a administração</strong><br></a></li>
-                <li><a href="#"><strong>Tire suas dúvidas</strong><br></a></li>
-                <li><a href="#"><strong>Faça uma sugestão</strong><br></a></li>
+                <li><a href="/contato"><strong>Entre em contato conosco!</strong><br></a></li>                                                             
+                <li><a href="/contato"><strong>Entre com a administração</strong><br></a></li>
+                <li><a href="/contato"><strong>Tire suas dúvidas</strong><br></a></li>
+                <li><a href="/contato"><strong>Faça uma sugestão</strong><br></a></li>
         </ul>
 
 
@@ -162,7 +168,7 @@
         <ul style="display: inline-block;"> 
             <strong>REDES SOCIAIS</strong>                                                                                                                                                        
                 <li><a href="#"><strong>Facebook</strong><br></a></li>                                                             
-                <li><a href="#"><strong>Youtube</strong><br></a></li>
+                <li><a href="http://wa.me/557191149124" target="_blank"><strong>WhatsApp</strong><br></a></li>
                 <li><a href="#"><strong>Instagran</strong><br></a></li>
                 <li><a href="#"><strong>Twitter</strong><br></a></li>
         </ul>
@@ -171,6 +177,15 @@
         <strong style="display: inline-block; font-size: 30px;">IMPERIO NETWORKS</strong>
         <br><br>
     </footer>
+
+{% else %}
+    <style>
+        body{
+            background-image: url(/static/back.png);
+        }
+    </style>
+    <br><br>
+{% endif %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
