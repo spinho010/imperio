@@ -1,17 +1,29 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
     <title>CONTATO</title>
     <style>
+        body{
+            background-color: wheat;
+        }
+
+    </style>
+    <style>
         .container{
-            margin: auto;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+
+    <a href="/"><button type="button" class="btn btn-success">Voltar</button></a>
+
     <div class="container">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdva0idEsca6PCGDIUKc58tIr3oyjNisLbd-Zsrd1dAd8TMWg/viewform?embedded=true" width="640" height="971" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </div>
