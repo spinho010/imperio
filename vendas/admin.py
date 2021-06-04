@@ -1,5 +1,5 @@
 from django.contrib import admin
-from vendas.models import Dados, plano_internet, bairro_internet
+from vendas.models import Dados, plano_internet, bairro_internet, Estado
 
 # Register your models here.
 
@@ -20,3 +20,9 @@ class NomePlano(admin.ModelAdmin):
     list_display = ('nome_plano', 'data_assinatura')
 
 admin.site.register(plano_internet, NomePlano)
+
+
+class Status_Internet(admin.ModelAdmin):
+    list_display = ('status', 'data_atual', 'retorno')
+
+admin.site.register(Estado, Status_Internet)

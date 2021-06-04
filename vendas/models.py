@@ -24,3 +24,11 @@ class Dados(models.Model):
     plano = models.ForeignKey(plano_internet, max_length=60, null=True, on_delete=models.PROTECT)
     endereço = models.ForeignKey(bairro_internet, max_length=60, null=True, on_delete=models.PROTECT)
     usuario = models.ForeignKey(User, on_delete=models.PROTECT)
+
+
+class Estado(models.Model):
+    status = models.CharField(verbose_name='Status:', max_length=60, blank=True)
+    motivo = models.CharField(verbose_name='Motivo:', max_length=60, blank=True)
+    data_atual = models.CharField(verbose_name='Data Atual:', max_length=60, blank=True)
+    afetado = models.CharField(verbose_name='Locais Afetados:', max_length=60, blank=True)
+    retorno = models.CharField(verbose_name='Retorno:', max_length=60, blank=True)

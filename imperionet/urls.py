@@ -18,7 +18,7 @@ from django.urls import path, include
 from vendas import views
 from django.conf import settings
 from django.conf.urls.static import static
-from vendas.views import CreateDados, Ver_Dados, Ver_Formulario, Loja, About
+from vendas.views import CreateDados, Ver_Dados, Ver_Formulario, Loja, About, Produtos, Status
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,7 @@ urlpatterns = [
     path('perfil/', Ver_Dados.as_view(), name='ver_dados'),
     path('contato/', Ver_Formulario.as_view(), name='ver_formulario'),
     path('loja/', Loja.as_view(), name='loja'),
-    path('about/', About.as_view(), name='about')
+    path('about/', About.as_view(), name='about'),
+    path('produtos/', Produtos.as_view(), name='produtos'),
+    path('status/', Status.as_view(), name='status'),
 ]

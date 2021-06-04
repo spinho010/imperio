@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Status da Internet</title>
+    <style>
+        body{
+        background: rgb(22,142,191);
+        background: linear-gradient(90deg, rgba(22,142,191,1) 0%, rgba(7,178,243,1) 0%, rgba(41,3,255,1) 0%, rgba(27,173,228,1) 0%, rgba(3,104,255,1) 39%, rgba(3,46,255,1) 83%, rgba(3,50,255,1) 100%);
+        }
+    main{
+        background-color: white;
+        width: 700px;
+        heigth: 600px;
+        margin: auto;
+        padding: 10px;
+        box-shadow: 6px 6px 10px black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 25px;
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <main>
+        SITUAÇÃO ATUAL DA REDE: {{ Estado.status }}<br>
+        <hr>
+        MOTIVO: {{ Estado.status }}<br>
+        DATA DO AVISO: {{ Estado.data_atual }}<br>
+        LOCAIS AFETADOS: {{ Estado.afetado }}<br>
+        HORARIO PARA RETORNO: {{ Estado.retorno }}<br>
+        <hr>
+        <a href="/"><button type="button" class="btn btn-success">Voltar</button></a>
+        <a href="/http://wa.me/557191149124"><button type="button" class="btn btn-primary">Entre em Contato!</button></a>
+        
+    </main>
+</body>
+</html>

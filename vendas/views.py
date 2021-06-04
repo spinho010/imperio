@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from vendas.models import Dados
+from vendas.models import Dados, Estado
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic import TemplateView
@@ -10,6 +10,8 @@ from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 
 
+class Produtos(TemplateView):
+    template_name = 'produtos_loja.html'
 
 
 class Loja(TemplateView):
@@ -51,3 +53,8 @@ class Ver_Dados(ListView):
 class Ver_Formulario(ListView):
     model = Dados
     template_name = 'formulario.html'
+
+
+class Status(ListView):
+    model = Estado
+    template_name = 'status_rede.html'
