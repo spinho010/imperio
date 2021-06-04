@@ -49,11 +49,7 @@
       <td>Endereço: {{ Dados.endereço }}</td>
     </tr>
   {% empty %}
-    <tr>
-      <td>
-        Vôce ainda nao cadastrou seus dados!
-      </td>
-    </tr>
+    Vôce ainda nao cadastrou seus dados!
   </strong>
   {% endfor %}
   <hr>
@@ -64,6 +60,7 @@
   {% if user.groups.all.0.name == 'CLIENTE' %}
     NÍVEL DE PERMISSÃO: CLIENTE
   {% endif %}
+
 
   <hr>
   {% if user.groups.all.0.name == 'ADMINISTRAÇÃO' %}
