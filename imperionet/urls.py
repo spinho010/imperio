@@ -27,6 +27,6 @@ urlpatterns = [
     path('dados/', CreateDados.as_view(), name='dados'),
     path('perfil/', Ver_Dados.as_view(), name='ver_dados'),
     path('contato/', Ver_Formulario.as_view(), name='ver_formulario'),
-    path('produtos/', Loja.as_view(), name='loja'),
+    path('loja/', Loja.as_view(), name='loja'),
     path('about/', About.as_view(), name='about')
 ]
