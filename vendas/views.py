@@ -15,6 +15,9 @@ from django.contrib.auth.models import User
 class Loja(TemplateView):
     template_name = 'produtos.html'
 
+class About(TemplateView):
+    template_name = 'about.html'
+
 
 ############################################### CREATE VIEW ####################
 class CreateDados(CreateView):
