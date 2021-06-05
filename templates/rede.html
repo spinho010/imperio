@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% load crispy_forms_tags %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Gerenciar Rede</title>
+    <style>
+        body{
+            background: rgb(22,142,191);
+            background: linear-gradient(90deg, rgba(22,142,191,1) 0%, rgba(7,178,243,1) 0%, rgba(41,3,255,1) 0%, rgba(27,173,228,1) 0%, rgba(3,104,255,1) 39%, rgba(3,46,255,1) 83%, rgba(3,50,255,1) 100%);
+        }
+        main{
+        background-color: white;
+        width: 700px;
+        heigth: 600px;
+        margin: auto;
+        padding: 20px;
+        box-shadow: 6px 6px 10px black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        border-radius: 15px;
+        color: black;
+        text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <br><br>
+    <h1 style="color: white; text-align: center;">
+        ATUALIZAR O STATUS DA REDE
+    </h1>
+    <br><br><br>
+
+    <div class="container" id="container1">
+        <main>
+            <form action="" method="POST">
+                
+                {% csrf_token %} 
+
+                {{ form|crispy }}
+
+                <button type="submit" class="btn btn-success">Salvar</button>   <a href="/"><button class="btn btn-danger">Cancelar</button></a>
+
+            </form>
+            <br>
+        </main>
+    </div>
+    <br><br><br>
+
+</body>
+</html>

@@ -58,3 +58,12 @@ class Ver_Formulario(ListView):
 class Status(ListView):
     model = Estado
     template_name = 'status_rede.html'
+
+
+############################################### UPDATEVIEW ################################
+
+class UpdateStatus(UpdateView):
+    model = Estado
+    fields = ['status', 'motivo', 'data_atual', 'afetado', 'retorno']
+    template_name = 'rede.html'
+    success_url = ('/')
