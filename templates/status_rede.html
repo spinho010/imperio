@@ -32,14 +32,14 @@
         {% for Estado in object_list %}
         SITUAÇÃO ATUAL DA REDE: {{ Estado.status }}<br>
         <hr>
-        MOTIVO: {{ Estado.status }}<br>
+        MOTIVO: {{ Estado.motivo }}<br>
         DATA DO AVISO: {{ Estado.data_atual }}<br>
         LOCAIS AFETADOS: {{ Estado.afetado }}<br>
         HORARIO PARA RETORNO: {{ Estado.retorno }}<br>
         {% endfor %}
         <hr>
         <a href="/"><button type="button" class="btn btn-success">Voltar</button></a>
-        <a href="/http://wa.me/557191149124"><button type="button" class="btn btn-primary">Entre em Contato!</button></a>
+        <a href="http://wa.me/557191149124" target="__blank"><button type="button" class="btn btn-primary">Entre em Contato!</button></a>
         
     </main>
 </body>
