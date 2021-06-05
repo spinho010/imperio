@@ -10,6 +10,9 @@ from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 
 
+################################################### TEMPLATE VIEW ##################
+
+
 class Produtos(TemplateView):
     template_name = 'produtos_loja.html'
 
@@ -20,6 +23,12 @@ class Loja(TemplateView):
 class About(TemplateView):
     template_name = 'about.html'
 
+
+class Plano1(TemplateView):
+    template_name = 'itens1.html'
+
+class Plano2(TemplateView):
+    template_name = 'itens2.html'
 
 ############################################### CREATE VIEW ####################
 class CreateDados(CreateView):
