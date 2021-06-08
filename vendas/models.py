@@ -32,3 +32,11 @@ class Estado(models.Model):
     data_atual = models.CharField(verbose_name='Data Atual:', max_length=60, blank=True)
     afetado = models.CharField(verbose_name='Locais Afetados:', max_length=60, blank=True)
     retorno = models.CharField(verbose_name='Retorno:', max_length=60, blank=True)
+
+
+class Loja(models.Model):
+    nome_objeto = models.CharField(verbose_name='Nome:', max_length=60, blank=True)
+    descricao = models.CharField(verbose_name='Descrição:', max_length=250, blank=True)
+    preço = models.CharField(verbose_name='Preço:', max_length=60, blank=True)
+    disponibilidade = models.CharField(verbose_name='Disponibilidade:', max_length=60, blank=True)
+    foto = models.ImageField(verbose_name='Foto', upload_to='media/', default='/static/no_image.png')

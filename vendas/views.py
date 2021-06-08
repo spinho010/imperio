@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from vendas.models import Dados, Estado
+from vendas.models import Dados, Estado, Loja
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic import TemplateView
@@ -8,12 +8,14 @@ from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
+import PIL
 
 
 ################################################### TEMPLATE VIEW ##################
 
 
-class Produtos(TemplateView):
+class Produtos(ListView):
+    model = Loja
     template_name = 'produtos_loja.html'
 
 
@@ -27,8 +29,6 @@ class About(TemplateView):
 class Plano1(TemplateView):
     template_name = 'itens1.html'
 
-class Plano2(TemplateView):
-    template_name = 'itens2.html'
 
 ############################################### CREATE VIEW ####################
 class CreateDados(CreateView):

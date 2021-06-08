@@ -1,5 +1,5 @@
 from django.contrib import admin
-from vendas.models import Dados, plano_internet, bairro_internet, Estado
+from vendas.models import Dados, plano_internet, bairro_internet, Estado, Loja
 
 # Register your models here.
 
@@ -26,3 +26,9 @@ class Status_Internet(admin.ModelAdmin):
     list_display = ('status', 'data_atual', 'retorno')
 
 admin.site.register(Estado, Status_Internet)
+
+
+class Loja_Admin(admin.ModelAdmin):
+    list_display = ('nome_objeto', 'preço', 'disponibilidade')
+
+admin.site.register(Loja, Loja_Admin)
