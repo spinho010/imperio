@@ -45,8 +45,6 @@ class CreateDados(CreateView):
 
         return url
 
-
-
 ################################################## LIST VIEW #########################
 
 
