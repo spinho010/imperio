@@ -14,13 +14,13 @@ import PIL
 ################################################### TEMPLATE VIEW ##################
 
 
-class Produtos(ListView):
-    model = Loja
+class Produtos(TemplateView):
     template_name = 'produtos_loja.html'
 
 
 class Loja(TemplateView):
     template_name = 'produtos.html'
+
 
 class About(TemplateView):
     template_name = 'about.html'

@@ -44,17 +44,137 @@
         <h1 class="font-weight-bold" style="padding-left: 70px;">Planos e Produtos</h1>
         <br>
 
-        {% for Loja in object_list %}
         <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
-            <img src="/media/{{ Loja.foto }}" class="card-img-top" alt="15m">
+            <img src="{% static 'midia/15m.jpg' %}" class="card-img-top" alt="15m">
             <div class="card-body">
-              <h5 class="card-title">{{ Loja.nome_objeto }}</h5>
-              <p class="card-text">{{ Loja.descricao }} <br> <strong>{{ Loja.preço }}</strong> <br> <strong>{{ Loja.disponibilidade }}</strong></p>
+              <h5 class="card-title">15 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 50,00</strong> <br> <strong>Disponivel</strong></p>
               <a href="/produtos/item">
                 <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
               </a>
             </div>
           </div>
-        {% endfor %}
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/15m.jpg' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">25 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 70,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/15m.jpg' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">35 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 90,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/50m.jpg' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">40 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 130,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/50m.jpg' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">45 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 140,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/50m.jpg' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">50 MEGAS</h5>
+              <p class="card-text">Internet Banda Larga <br> <strong>R$ 160,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/teclado.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Teclado USB</h5>
+              <p class="card-text">Teclado Custo Benefício <br> <strong>R$ 30,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/mouse.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Mouse USB</h5>
+              <p class="card-text">Teclado Custo Benefício <br> <strong>R$ 25,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/fone.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Fone de Ouvido</h5>
+              <p class="card-text">Headset Custo Benefício <br> <strong>R$ 90,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/roteador1.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Roteador Intelbras RF 301K</h5>
+              <p class="card-text">Nosso roteador de Entrada <br> <strong>R$ 130,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/roteador2.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Roteador TP-LINK TL-WR940N</h5>
+              <p class="card-text">Nosso roteador Intermediário <br> <strong>R$ 190,00</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="width: 18rem; display: inline-block; margin-left: 70px; padding: 15px;">
+            <img src="{% static 'midia/roteador3.png' %}" class="card-img-top" alt="15m">
+            <div class="card-body">
+              <h5 class="card-title">Roteador INTELBRAS GIGABIT RG 1200</h5>
+              <p class="card-text">Nosso roteador Avançado! <br> <strong>R$ 269,99</strong> <br> <strong>Disponivel</strong></p>
+              <a href="/produtos/item">
+                <button type="button" class="btn btn-primary" title="Comprar">Comprar</button><br>
+              </a>
+            </div>
+          </div>
 </body>
 </html>
