@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from vendas.models import Dados, Estado, Loja
+from vendas.models import Dados, Estado, Loja, Ocorrencia
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic import TemplateView
@@ -12,6 +12,15 @@ import PIL
 
 
 ################################################### TEMPLATE VIEW ##################
+class VerOcorrencia(ListView):
+    model = Ocorrencia
+    template_name = 'ocorrencia.html'
+
+
+class DeletarOcorrencia(DeleteView):
+    model = Ocorrencia
+    template_name = 'ocorrencia-delete.html'
+    success_url = ('/')
 
 
 class Produtos(TemplateView):

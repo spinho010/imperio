@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Ocorrencias</title>
+    <style>
+        body{
+        background: rgb(22,142,191);
+        background: linear-gradient(90deg, rgba(22,142,191,1) 0%, rgba(7,178,243,1) 0%, rgba(41,3,255,1) 0%, rgba(27,173,228,1) 0%, rgba(3,104,255,1) 39%, rgba(3,46,255,1) 83%, rgba(3,50,255,1) 100%);
+        }
+    main{
+        background-color: white;
+        width: auto;
+        heigth: 600px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 10px;
+        box-shadow: 6px 6px 10px black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 25px;
+        border-radius: 15px;
+    }
+    </style>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'pages:home' %}">IMPERIO NETWORKS</a>
+        <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/status">Internet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/loja">Loja</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/perfil">Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Sair</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Cadastro</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+</head>
+<body>
+    <br><br><br>
+    {% for Ocorrencia in object_list %}
+        <br>
+        <main>
+            <h1 style="font-weight: bold;">Ocorrências</h1>
+            <hr>
+            Ocorrência: {{ Ocorrencia.nome_ocorrencia }} <br>
+            Motivo ou Descrição: {{ Ocorrencia.motivo_ocorrencia }} <br>
+            Local: {{ Ocorrencia.local_ocorrencia }} <br>
+            Cliente: {{ Ocorrencia.nome_cliente }} <br>
+            <br>
+            <a href="{% url 'concluir-ocorrencia' Ocorrencia.id %}">
+                <button type="submit" class="btn btn-success">Concluir</button>
+            </a>
+        </main>
+        <br><br>
+
+    {% empty %}
+        <main>
+            <h1 style="font-weight: bold;">Ocorrências</h1>
+            <hr>
+            Nenhuma Ocorrência no Momento!
+        </main>
+    {% endfor %}
+</body>
+</html>
